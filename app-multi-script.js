@@ -652,10 +652,10 @@ class StoryBlocks {
                         All your data is stored locally and auto-saved as you work
                     </p>
                     
-                    ${(!('showDirectoryPicker' in window) || window.location.hostname.includes('github.io')) ? `
+                    ${(!('showDirectoryPicker' in window) || window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks')) ? `
                         <div style="background: var(--warning); color: white; padding: 1rem; border-radius: 0.5rem; margin-top: 2rem;">
-                            <strong>⚠️ ${window.location.hostname.includes('github.io') ? 'GitHub Pages Limitations' : 'Limited Browser Support'}</strong><br>
-                            ${window.location.hostname.includes('github.io') 
+                            <strong>⚠️ ${(window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks')) ? 'GitHub Pages Limitations' : 'Limited Browser Support'}</strong><br>
+                            ${(window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks')) 
                                 ? 'GitHub Pages doesn\'t support direct folder access for security reasons.'
                                 : 'Your browser doesn\'t support direct folder access.'} 
                             You can still use StoryBlocks, but:
@@ -663,7 +663,7 @@ class StoryBlocks {
                                 <li>Files will download individually when creating projects</li>
                                 <li>You'll need to manually create subfolders</li>
                                 <li>Use folder selection to load projects</li>
-                                ${!window.location.hostname.includes('github.io') ? '<li>For the best experience, use Chrome, Edge, or Brave browser</li>' : ''}
+                                ${!(window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks')) ? '<li>For the best experience, use Chrome, Edge, or Brave browser</li>' : ''}
                             </ul>
                         </div>
                     ` : ''}
@@ -1102,24 +1102,54 @@ class StoryBlocks {
     }
     
     async generateWorkspace() {
+        // Early exit if showDirectoryPicker is not available
+        if (!window.showDirectoryPicker) {
+            console.log('showDirectoryPicker not available, using fallback');
+            const title = document.getElementById('project-title').value || 'My Story World';
+            const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
+            const storyType = document.getElementById('story-type').value;
+            
+            const message = 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
+            alert(message);
+            this.generateWorkspaceFiles(title, description, storyType);
+            return;
+        }
+        
         const title = document.getElementById('project-title').value || 'My Story World';
         const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
         const storyType = document.getElementById('story-type').value;
         
+        // Debug logging
+        console.log('Current hostname:', window.location.hostname);
+        console.log('showDirectoryPicker available:', 'showDirectoryPicker' in window);
+        console.log('isSecureContext:', window.isSecureContext);
+        
         // Check if File System Access API is supported and we're not on a restricted environment
+        // GitHub Pages domains can be username.github.io or custom domains
+        const isGitHubPages = window.location.hostname.includes('github.io') || 
+                             window.location.pathname.includes('/storyblocks');
+        
         const isFileSystemAccessSupported = typeof window !== 'undefined' && 
                                           'showDirectoryPicker' in window && 
                                           window.isSecureContext &&
-                                          !window.location.hostname.includes('github.io');
+                                          !isGitHubPages;
         
-        if (!isFileSystemAccessSupported) {
+        console.log('isGitHubPages:', isGitHubPages);
+        console.log('isFileSystemAccessSupported:', isFileSystemAccessSupported);
+        
+        if (!isFileSystemAccessSupported || isGitHubPages) {
             // Fallback for browsers without File System Access API or GitHub Pages
-            const message = window.location.hostname.includes('github.io') 
+            const message = isGitHubPages 
                 ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
                 : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
             
             alert(message);
-            this.generateWorkspaceFiles(title, description, storyType);
+            try {
+                this.generateWorkspaceFiles(title, description, storyType);
+            } catch (error) {
+                console.error('Error generating workspace files:', error);
+                alert('Error creating workspace files. Please try again.');
+            }
             return;
         }
         
