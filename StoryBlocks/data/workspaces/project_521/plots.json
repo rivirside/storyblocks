@@ -1,0 +1,332 @@
+{
+  "simulation_discovery_arc": {
+    "id": "simulation_discovery_arc",
+    "title": "The Simulation Discovery",
+    "type": "main_arc",
+    "productionIds": ["main_story"],
+    "description": "The central narrative following the Project 521 team's discovery of evidence that reality is a simulation, and their struggle to understand what this means for humanity.",
+    "status": "development",
+    "plotPoints": [
+      {
+        "id": "capsule_discovery",
+        "title": "The Martian Capsule",
+        "description": "Discovery of proto-life and encrypted data during Mars excavation",
+        "act": 1,
+        "sequence": 1,
+        "characters": ["marcus_chen", "sierra_washington", "research_team"],
+        "locations": ["project_521_facility"],
+        "significance": "Inciting incident that begins the entire story"
+      },
+      {
+        "id": "pattern_recognition", 
+        "title": "Intentional Seeding",
+        "description": "Team recognizes the proto-life was deliberately sent to the solar system",
+        "act": 1,
+        "sequence": 2,
+        "characters": ["marcus_chen", "research_team"],
+        "locations": ["project_521_facility"],
+        "significance": "First major revelation about artificial origins"
+      },
+      {
+        "id": "consciousness_connection",
+        "title": "Quantum Consciousness Research",
+        "description": "Discovery of quantum connections between consciousness and reality manipulation",
+        "act": 1,
+        "sequence": 3,
+        "characters": ["marcus_chen", "vera_chen"],
+        "locations": ["project_521_facility"],
+        "significance": "Bridging discovery between biology and consciousness"
+      },
+      {
+        "id": "simulation_hypothesis",
+        "title": "The Simulation Evidence", 
+        "description": "Overwhelming evidence suggests universe is simulation that consciousness can break",
+        "act": 2,
+        "sequence": 1,
+        "characters": ["marcus_chen", "sierra_washington", "vera_chen"],
+        "locations": ["project_521_facility"],
+        "significance": "Major plot revelation that changes everything"
+      },
+      {
+        "id": "reality_breakdown",
+        "title": "Glitches in Reality",
+        "description": "Characters begin experiencing reality inconsistencies as awareness grows",
+        "act": 2,
+        "sequence": 2,
+        "characters": ["all_main_characters"],
+        "locations": ["multiple"],
+        "significance": "Consequences of discovery become personal and dangerous"
+      },
+      {
+        "id": "truth_or_stability",
+        "title": "The Choice",
+        "description": "Characters must decide whether to pursue truth or preserve stability",
+        "act": 3,
+        "sequence": 1,
+        "characters": ["all_main_characters"],
+        "locations": ["multiple"],
+        "significance": "Final decision point about humanity's future"
+      }
+    ],
+    "themes": ["Truth vs. Comfort", "Reality vs. Illusion", "Scientific Responsibility"],
+    "tags": ["main_plot", "simulation", "consciousness", "discovery"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "foundation_conspiracy_arc": {
+    "id": "foundation_conspiracy_arc", 
+    "title": "The Foundation Conspiracy",
+    "type": "main_arc",
+    "productionIds": ["main_story"],
+    "description": "The shadowy conspiracy led by Aya Stone to control humanity's response to the simulation discovery, using both the Foundation's resources and a consciousness cult.",
+    "status": "development",
+    "plotPoints": [
+      {
+        "id": "foundation_awareness",
+        "title": "Foundation Learns of Discovery",
+        "description": "Foundation becomes aware of Project 521 findings through surveillance",
+        "act": 1,
+        "sequence": 2,
+        "characters": ["aya_stone", "foundation_leadership"],
+        "locations": ["foundation_headquarters"],
+        "significance": "Sets up the conspiracy response"
+      },
+      {
+        "id": "infiltration_planning",
+        "title": "Project 521 Infiltration Planning", 
+        "description": "Aya plans infiltration to monitor and control dangerous discoveries",
+        "act": 1,
+        "sequence": 3,
+        "characters": ["aya_stone", "vera_chen"],
+        "locations": ["foundation_headquarters"],
+        "significance": "Strategic response to contain the threat"
+      },
+      {
+        "id": "vera_infiltration",
+        "title": "Vera Chen Joins Project 521",
+        "description": "Vera integrates into research team as Foundation agent",
+        "act": 1,
+        "sequence": 4,
+        "characters": ["vera_chen", "marcus_chen", "sierra_washington"],
+        "locations": ["project_521_facility"],
+        "significance": "Inside access to monitor and influence discoveries"
+      },
+      {
+        "id": "cult_manipulation",
+        "title": "Consciousness Cult Operations",
+        "description": "Aya uses her cult to test consciousness control theories",
+        "act": 2,
+        "sequence": 1,
+        "characters": ["aya_stone", "vera_chen", "cult_members"],
+        "locations": ["cult_compound"],
+        "significance": "Alternative approach to controlling human consciousness"
+      },
+      {
+        "id": "foundation_escalation",
+        "title": "Emergency Response Protocols",
+        "description": "Foundation accelerates control measures as discovery spreads", 
+        "act": 2,
+        "sequence": 3,
+        "characters": ["aya_stone", "sara_sierra_washington"],
+        "locations": ["foundation_headquarters"],
+        "significance": "Conspiracy moves from covert to overt action"
+      },
+      {
+        "id": "conspiracy_exposed",
+        "title": "The Truth About Control",
+        "description": "Characters discover the full extent of Foundation manipulation",
+        "act": 3,
+        "sequence": 2,
+        "characters": ["all_main_characters"],
+        "locations": ["multiple"],
+        "significance": "Revelation of who has been pulling the strings"
+      }
+    ],
+    "themes": ["Power and Control", "Idealism vs. Tyranny", "Hidden Manipulation"],
+    "tags": ["conspiracy", "Foundation", "control", "manipulation"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "twin_identity_arc": {
+    "id": "twin_identity_arc",
+    "title": "The Washington Twins",
+    "type": "character_arc", 
+    "productionIds": ["main_story"],
+    "description": "The parallel journeys of identical twins Sara and Sierra Washington, separated at birth and unknowingly serving opposite sides of the central conflict.",
+    "status": "development",
+    "plotPoints": [
+      {
+        "id": "parallel_lives",
+        "title": "Parallel Development",
+        "description": "Both twins develop similar skills and dedication despite different paths",
+        "act": 1,
+        "sequence": 1,
+        "characters": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["foundation_headquarters", "project_521_facility"],
+        "significance": "Establishes the dramatic irony of their opposition"
+      },
+      {
+        "id": "opposing_missions",
+        "title": "Serving Different Masters",
+        "description": "Sara enforces Foundation control while Sierra protects the research",
+        "act": 1,
+        "sequence": 4,
+        "characters": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["multiple"],
+        "significance": "Direct opposition without awareness"
+      },
+      {
+        "id": "first_hints",
+        "title": "Subtle Connections",
+        "description": "Small clues hint at the connection between the twins",
+        "act": 2,
+        "sequence": 1,
+        "characters": ["both_twins", "observant_characters"],
+        "locations": ["multiple"],
+        "significance": "Building toward revelation"
+      },
+      {
+        "id": "twin_discovery",
+        "title": "The Truth Revealed",
+        "description": "The twins discover each other's existence",
+        "act": 2,
+        "sequence": 4,
+        "characters": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["climactic_meeting_location"],
+        "significance": "Major character revelation and conflict"
+      },
+      {
+        "id": "identity_crisis",
+        "title": "Questioning Everything", 
+        "description": "Both twins question their loyalties and identities",
+        "act": 3,
+        "sequence": 1,
+        "characters": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["multiple"],
+        "significance": "Character growth through identity crisis"
+      },
+      {
+        "id": "final_choice",
+        "title": "Choosing Sides",
+        "description": "The twins must decide whether family or ideology matters more",
+        "act": 3,
+        "sequence": 3,
+        "characters": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["final_confrontation_location"],
+        "significance": "Resolution of identity and loyalty conflicts"
+      }
+    ],
+    "themes": ["Identity and Family", "Nature vs. Nurture", "Loyalty vs. Truth"],
+    "tags": ["twins", "identity", "family", "loyalty", "character_development"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "enhancement_ethics_arc": {
+    "id": "enhancement_ethics_arc",
+    "title": "The Enhancement Dilemma",
+    "type": "thematic_arc",
+    "productionIds": ["main_story"],
+    "description": "Elena Vasquez's vision of human genetic optimization conflicts with questions of authenticity and consent, exploring what it means to be human.",
+    "status": "development",
+    "plotPoints": [
+      {
+        "id": "enhancement_programs",
+        "title": "Genesis Enhancement Programs",
+        "description": "Elena's genetic modification programs show promise and controversy",
+        "act": 1,
+        "sequence": 2,
+        "characters": ["elena_vasquez", "enhanced_individuals", "colony_residents"],
+        "locations": ["genesis_facilities", "mars_colony_central"],
+        "significance": "Establishes the enhancement vs. authenticity theme"
+      },
+      {
+        "id": "ethical_concerns",
+        "title": "Questions of Consent",
+        "description": "Enhanced individuals begin questioning their modifications",
+        "act": 2,
+        "sequence": 1,
+        "characters": ["enhanced_individuals", "elena_vasquez"],
+        "locations": ["genesis_facilities"],
+        "significance": "Personal cost of Elena's vision becomes clear"
+      },
+      {
+        "id": "enhancement_rebellion",
+        "title": "The Modified Revolt", 
+        "description": "Enhanced humans develop beyond Elena's control",
+        "act": 2,
+        "sequence": 3,
+        "characters": ["enhanced_individuals", "elena_vasquez"],
+        "locations": ["mars_colony_central"],
+        "significance": "Consequences of playing with human nature"
+      },
+      {
+        "id": "authenticity_question",
+        "title": "What Makes Us Human?",
+        "description": "Characters debate whether enhanced consciousness is still authentic",
+        "act": 3,
+        "sequence": 1,
+        "characters": ["all_characters"],
+        "locations": ["multiple"],
+        "significance": "Central philosophical question of the story"
+      }
+    ],
+    "themes": ["Human Enhancement", "Authenticity", "Consent and Control", "Evolution vs. Preservation"],
+    "tags": ["enhancement", "ethics", "authenticity", "human_nature"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "consciousness_exploration_arc": {
+    "id": "consciousness_exploration_arc",
+    "title": "The Nature of Consciousness",
+    "type": "thematic_arc",
+    "productionIds": ["main_story"],
+    "description": "A philosophical exploration of what consciousness means, whether it can be simulated, and what makes experience authentic.",
+    "status": "development",
+    "plotPoints": [
+      {
+        "id": "consciousness_research",
+        "title": "Studying Awareness",
+        "description": "Project 521 team researches consciousness and reality connections",
+        "act": 1,
+        "sequence": 3,
+        "characters": ["marcus_chen", "research_team"],
+        "locations": ["project_521_facility"],
+        "significance": "Scientific approach to understanding consciousness"
+      },
+      {
+        "id": "cult_experiments",
+        "title": "Consciousness Manipulation",
+        "description": "Aya's cult experiments with collective consciousness and reality perception",
+        "act": 2,
+        "sequence": 1,
+        "characters": ["aya_stone", "vera_chen", "cult_members"],
+        "locations": ["cult_compound"],
+        "significance": "Alternative approach to consciousness study"
+      },
+      {
+        "id": "reality_testing",
+        "title": "Testing What's Real",
+        "description": "Characters develop methods to distinguish simulation from reality",
+        "act": 2,
+        "sequence": 2,
+        "characters": ["multiple_groups"],
+        "locations": ["multiple"],
+        "significance": "Practical application of consciousness theories"
+      },
+      {
+        "id": "consciousness_breakthrough",
+        "title": "The Truth About Awareness",
+        "description": "Major breakthrough in understanding consciousness and simulation",
+        "act": 3,
+        "sequence": 1,
+        "characters": ["key_researchers"],
+        "locations": ["project_521_facility"],
+        "significance": "Resolution of central mystery"
+      }
+    ],
+    "themes": ["Nature of Consciousness", "Reality vs. Simulation", "Authentic Experience"],
+    "tags": ["consciousness", "philosophy", "reality", "experience"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "project_521_pilot": {
+    "id": "project_521_pilot",
+    "title": "Project 521 - Pilot Episode", 
+    "productionId": "main_story",
+    "type": "television_episode",
+    "format": "fountain",
+    "status": "outline",
+    "pageCount": 0,
+    "description": "The pilot episode introducing the Project 521 research team and the discovery that will change everything.",
+    "logline": "When a Mars research team discovers encrypted data in alien artifacts, they must decide whether to pursue the truth or protect humanity from what they might find.",
+    "acts": {
+      "act1": {
+        "pages": "1-15",
+        "description": "Introduce team, establish normal research operations, discovery of the capsule"
+      },
+      "act2": {
+        "pages": "16-45", 
+        "description": "Initial analysis reveals intentional origins, team dynamics and conflicts emerge"
+      },
+      "act3": {
+        "pages": "46-60",
+        "description": "First hints of simulation evidence, consequences begin to manifest"
+      }
+    },
+    "characters": ["marcus_chen", "sierra_washington", "vera_chen", "project_521_team"],
+    "locations": ["project_521_facility", "mars_colony_central"],
+    "themes": ["scientific_discovery", "truth_vs_safety", "team_dynamics"],
+    "content": "",
+    "notes": "Pilot should establish the scientific credibility while building toward the supernatural elements",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "foundation_origins": {
+    "id": "foundation_origins",
+    "title": "The Foundation Origins",
+    "productionId": "main_story", 
+    "type": "television_episode",
+    "format": "fountain",
+    "status": "concept",
+    "pageCount": 0,
+    "description": "Flashback episode revealing Aya Stone's childhood and the Foundation's historical manipulation.",
+    "logline": "Through flashbacks, we see how Aya Stone's traumatic upbringing created the idealistic tyrant who now threatens human consciousness.",
+    "acts": {
+      "act1": {
+        "pages": "1-15",
+        "description": "Present day Aya making crucial decision, flashback to childhood academy"
+      },
+      "act2": {
+        "pages": "16-45",
+        "description": "Aya's academy training, mentor's disappearance, relationship with Bjorn"
+      },
+      "act3": {
+        "pages": "46-60", 
+        "description": "Adult Aya's Foundation takeover, parallel with childhood trauma patterns"
+      }
+    },
+    "characters": ["aya_stone", "bjorn_hessels", "foundation_academy_characters"],
+    "locations": ["foundation_academy", "foundation_headquarters"],
+    "themes": ["childhood_trauma", "institutional_control", "idealism_corruption"],
+    "content": "",
+    "notes": "Character study showing how good intentions can become authoritarian control",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "twin_revelation": {
+    "id": "twin_revelation",
+    "title": "Divided Loyalties",
+    "productionId": "main_story",
+    "type": "television_episode", 
+    "format": "fountain",
+    "status": "concept",
+    "pageCount": 0,
+    "description": "The Washington twins discover each other's existence, forcing them to question everything they believe.",
+    "logline": "When identical twins serving opposite sides of a conspiracy meet for the first time, they must choose between ideology and family.",
+    "acts": {
+      "act1": {
+        "pages": "1-15",
+        "description": "Parallel scenes of Sara and Sierra performing similar duties for different masters"
+      },
+      "act2": {
+        "pages": "16-45",
+        "description": "Investigation leads to discovery, first confrontation between twins"
+      },
+      "act3": {
+        "pages": "46-60",
+        "description": "Identity crisis and difficult choices about loyalty vs. truth"
+      }
+    },
+    "characters": ["sara_sierra_washington", "sierra_washington", "aya_stone", "marcus_chen"],
+    "locations": ["project_521_facility", "foundation_headquarters", "neutral_meeting_location"],
+    "themes": ["identity", "family", "loyalty", "nature_vs_nurture"],
+    "content": "",
+    "notes": "Emotional core episode exploring how family bonds challenge ideological certainty",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

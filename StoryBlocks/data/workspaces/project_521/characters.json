@@ -1,0 +1,275 @@
+{
+  "elena_vasquez": {
+    "id": "elena_vasquez",
+    "name": "Dr. Elena Vasquez",
+    "role": "antagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 38,
+      "gender": "female",
+      "occupation": "CEO of Genesis Corporation",
+      "location": "New Geneva Colony, Mars",
+      "ethnicity": "Latina",
+      "nationality": "Mexican-American"
+    },
+    "description": "The charismatic and ruthless CEO of Genesis Corporation, Mars's largest development company. A brilliant visionary who believes in guiding human evolution through genetic modification, she serves as Aya Stone's 'Left Hand' in the Foundation conspiracy.",
+    "personality": {
+      "traits": ["Visionary", "Narcissistic", "Charismatic", "Ruthless", "Intelligent"],
+      "motivations": ["Guide human evolution", "Build corporate empire", "Ensure species survival"],
+      "fears": ["Human stagnation", "Loss of control", "Being remembered as a failure"],
+      "goals": ["Create optimized human society", "Control Mars development", "Achieve scientific immortality"]
+    },
+    "backstory": "Born in Mexico City to immigrant engineers, Elena excelled at MIT and Stanford before becoming an entrepreneur in Mars development. Recruited by the Foundation after demonstrating genetic modification capabilities, she built Genesis Corporation into a powerhouse while secretly serving Foundation goals.",
+    "relationships": [
+      {
+        "characterId": "aya_stone",
+        "type": "alliance",
+        "description": "Professional partnership in Foundation conspiracy, competitive dynamic"
+      },
+      {
+        "characterId": "vera_chen",
+        "type": "coordination",
+        "description": "Operational coordination with mutual suspicion"
+      }
+    ],
+    "arc": "The Enhancement Dilemma - Elena's belief in genetic optimization conflicts with human authenticity",
+    "status": "active",
+    "tags": ["Foundation", "Mars", "genetics", "corporate", "antagonist"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "sara_sierra_washington": {
+    "id": "sara_sierra_washington", 
+    "name": "Sara Stone (Washington)",
+    "role": "antagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 34,
+      "gender": "female", 
+      "occupation": "Foundation Operative",
+      "location": "Earth, multiple secure Foundation facilities",
+      "ethnicity": "African-American",
+      "nationality": "American"
+    },
+    "description": "Aya Stone's devoted partner and the Foundation's most effective enforcer. Unknown to her, she has an identical twin sister leading the Mars mission that threatens everything she's working to protect.",
+    "personality": {
+      "traits": ["Loyal", "Ruthless", "Competent", "Devoted", "Efficient"],
+      "motivations": ["Serve Aya Stone", "Protect Foundation goals", "Maintain order"],
+      "fears": ["Disappointing Aya", "Chaos and disorder", "Loss of purpose"],
+      "goals": ["Execute Foundation mission", "Protect Aya", "Eliminate threats"]
+    },
+    "backstory": "Separated from her twin sister at birth, Sara was recruited into the Foundation system at a young age. She adopted the 'Stone' surname when joining Aya's inner circle and serves as the perfect tool - naturally loyal with ruthless competence.",
+    "relationships": [
+      {
+        "characterId": "aya_stone",
+        "type": "romantic_partnership",
+        "description": "Devoted romantic partner and operational second-in-command"
+      },
+      {
+        "characterId": "sierra_washington",
+        "type": "unknown_twin",
+        "description": "Identical twin sister, neither knows of the other's existence"
+      }
+    ],
+    "arc": "The Identity Crisis - Discovery of her twin and questioning of absolute loyalty",
+    "status": "active",
+    "tags": ["Foundation", "enforcer", "twins", "loyalty", "antagonist"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "vera_chen": {
+    "id": "vera_chen",
+    "name": "Vera Chen",
+    "role": "complex_antagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 35,
+      "gender": "female",
+      "occupation": "Cult Second-in-Command / Foundation Agent",
+      "location": "Mars Colony, Project 521 facility",
+      "ethnicity": "Chinese-American",
+      "nationality": "American"
+    },
+    "description": "Aya Stone's romantic partner and cult second-in-command, known as 'The First Shepherd.' She harbors a mysterious connection to Marcus Chen and may be operating under hidden agendas while infiltrating Project 521.",
+    "personality": {
+      "traits": ["Calculating", "Emotionally intelligent", "Protective", "Secretive", "Conflicted"],
+      "motivations": ["Protect vulnerable people", "Serve hidden mission", "Maintain relationship with Aya"],
+      "fears": ["Exposure of true identity", "Harm to innocents", "Loss of Aya"],
+      "goals": ["Complete infiltration mission", "Protect cult members", "Discover own origins"]
+    },
+    "backstory": "Appeared on Mars 3 years ago with sparse background records. Possible connection to Marcus Chen through genetics or family ties. Has embedded herself as Aya's most trusted advisor while potentially serving other masters.",
+    "relationships": [
+      {
+        "characterId": "aya_stone", 
+        "type": "romantic_partnership",
+        "description": "Romantic relationship complicated by hidden agenda"
+      },
+      {
+        "characterId": "marcus_chen",
+        "type": "mysterious_connection",
+        "description": "Possible family connection - twin, clone, or daughter"
+      }
+    ],
+    "arc": "The Double Agent Dilemma - Balancing genuine feelings against professional obligations",
+    "status": "active",
+    "tags": ["cult", "Foundation", "infiltration", "mystery", "double_agent"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "aya_stone": {
+    "id": "aya_stone",
+    "name": "Dr. Aya Stone",
+    "role": "primary_antagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 42,
+      "gender": "female",
+      "occupation": "Foundation Leader / Cult Leader",
+      "location": "Mars Colony, repurposed research facility",
+      "ethnicity": "Caucasian",
+      "nationality": "American (birth name: Anna Stern)"
+    },
+    "description": "The charismatic leader of 'The Awakened Collective' cult and secret head of the Foundation conspiracy. A former AI ethicist turned digital prophet, she genuinely believes she's saving humanity from technological slavery while using increasingly authoritarian methods.",
+    "personality": {
+      "traits": ["Charismatic", "Intelligent", "Idealistic", "Authoritarian", "Traumatized"],
+      "motivations": ["Save human consciousness", "Prevent AI dominance", "Protect humanity"],
+      "fears": ["Human extinction", "Loss of control", "Being wrong", "Repeating childhood trauma"],
+      "goals": ["Guide human awakening", "Control reality narrative", "Build authentic society"]
+    },
+    "backstory": "Raised in Foundation boarding schools as an orphan, subjected to institutional conditioning. Became an AI ethicist before discovering Foundation consciousness manipulation. Suffered psychological crisis when simulation hypothesis was confirmed, emerging as a messianic leader.",
+    "relationships": [
+      {
+        "characterId": "sara_sierra_washington",
+        "type": "romantic_partnership", 
+        "description": "Devoted romantic partner and operational enforcer"
+      },
+      {
+        "characterId": "vera_chen",
+        "type": "romantic_partnership",
+        "description": "Intimate relationship complicated by Vera's hidden agenda"
+      },
+      {
+        "characterId": "bjorn_hessels",
+        "type": "former_ally",
+        "description": "Childhood friend who now questions her methods"
+      }
+    ],
+    "arc": "The Idealistic Tyrant - Good intentions corrupted by trauma and power",
+    "status": "active", 
+    "tags": ["Foundation", "cult", "leader", "trauma", "idealism", "antagonist"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "marcus_chen": {
+    "id": "marcus_chen",
+    "name": "Dr. Marcus Chen",
+    "role": "protagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 38,
+      "gender": "male",
+      "occupation": "Project 521 Lead Researcher",
+      "location": "Mars Colony, Project 521 facility",
+      "ethnicity": "Chinese-American",
+      "nationality": "American"
+    },
+    "description": "Lead researcher for Project 521, specializing in consciousness studies and quantum biology. A dedicated scientist whose discovery of simulation evidence forces him to question everything he believes about reality and human nature.",
+    "personality": {
+      "traits": ["Analytical", "Dedicated", "Ethical", "Curious", "Conflicted"],
+      "motivations": ["Discover truth", "Advance human knowledge", "Protect his team"],
+      "fears": ["Being manipulated", "Losing objective truth", "Harming others"],
+      "goals": ["Understand the discovery", "Protect research integrity", "Make right choices"]
+    },
+    "backstory": "Brilliant scientist recruited for Project 521 due to his expertise in consciousness research. Has unknown connection to Vera Chen that may complicate his objectivity as the cult infiltrates his project.",
+    "relationships": [
+      {
+        "characterId": "vera_chen",
+        "type": "mysterious_connection",
+        "description": "Possible family member - twin, father, or other genetic connection"
+      },
+      {
+        "characterId": "sierra_washington",
+        "type": "professional",
+        "description": "Working relationship with mission commander"
+      }
+    ],
+    "arc": "The Truth Seeker - Balancing scientific objectivity with personal stakes",
+    "status": "active",
+    "tags": ["Project 521", "scientist", "protagonist", "research", "consciousness"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "sierra_washington": {
+    "id": "sierra_washington",
+    "name": "Captain Sierra Washington",
+    "role": "protagonist",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 34,
+      "gender": "female",
+      "occupation": "Mission Commander",
+      "location": "Mars Colony, Project 521 facility", 
+      "ethnicity": "African-American",
+      "nationality": "American"
+    },
+    "description": "Military mission commander for Project 521, known for following protocol and maintaining discipline. Unaware that her identical twin sister is serving as Aya Stone's enforcer on Earth.",
+    "personality": {
+      "traits": ["Disciplined", "Loyal", "Professional", "Rule-following", "Protective"],
+      "motivations": ["Complete the mission", "Protect her team", "Uphold military values"],
+      "fears": ["Mission failure", "Team casualties", "Breaking protocol"],
+      "goals": ["Ensure mission success", "Maintain team safety", "Follow orders"]
+    },
+    "backstory": "Career military officer selected for Project 521 due to her exemplary record and psychological stability. Has no knowledge of her twin sister Sara or the Foundation conspiracy that threatens her mission.",
+    "relationships": [
+      {
+        "characterId": "sara_sierra_washington",
+        "type": "unknown_twin",
+        "description": "Identical twin sister, neither knows of the other's existence"
+      },
+      {
+        "characterId": "marcus_chen",
+        "type": "professional",
+        "description": "Working relationship with lead researcher"
+      }
+    ],
+    "arc": "The Rule Follower's Dilemma - When following orders conflicts with truth",
+    "status": "active",
+    "tags": ["Project 521", "military", "twins", "protagonist", "leadership"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "bjorn_hessels": {
+    "id": "bjorn_hessels",
+    "name": "Bjorn Hessels",
+    "role": "supporting",
+    "productionIds": ["main_story"],
+    "demographics": {
+      "age": 43,
+      "gender": "male",
+      "occupation": "Technology Developer",
+      "location": "Various (provides remote support)",
+      "ethnicity": "Scandinavian",
+      "nationality": "Norwegian"
+    },
+    "description": "Brilliant technologist and Aya Stone's former childhood ally from Foundation boarding school. Now provides technological support while increasingly questioning her authoritarian methods.",
+    "personality": {
+      "traits": ["Brilliant", "Ethical", "Conflicted", "Loyal", "Principled"],
+      "motivations": ["Help old friend", "Maintain ethical standards", "Advance technology responsibly"],
+      "fears": ["Aya becoming tyrannical", "Technology being misused", "Losing friendship"],
+      "goals": ["Support Aya's goals ethically", "Prevent technological abuse", "Maintain moral compass"]
+    },
+    "backstory": "Childhood friend of Aya Stone from Foundation boarding school. Unlike Aya, he questioned authority from outside the system. Now serves as her conscience while enabling her operations through advanced technology.",
+    "relationships": [
+      {
+        "characterId": "aya_stone",
+        "type": "former_romantic",
+        "description": "Childhood bond, former romance, current moral tension"
+      }
+    ],
+    "arc": "The Conscience - Torn between loyalty and ethics",
+    "status": "active",
+    "tags": ["Foundation", "technology", "childhood_friend", "ethics", "support"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

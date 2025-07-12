@@ -1,0 +1,42 @@
+{
+  "id": "project_521",
+  "title": "Project 521",
+  "description": "A science fiction story exploring consciousness, simulation theory, and the nature of reality through the lens of a Mars colony research project.",
+  "type": "science-fiction",
+  "status": "development",
+  "created": "2025-01-12T00:00:00Z",
+  "lastModified": "2025-01-12T00:00:00Z",
+  "version": "1.0.0",
+  "world": {
+    "title": "Project 521 Universe",
+    "description": "A near-future world where humanity has colonized Mars and made a discovery that challenges the nature of reality itself.",
+    "themes": ["consciousness", "simulation theory", "identity", "power", "technology", "authenticity"],
+    "setting": "2030-2040s, Earth and Mars",
+    "genre": ["science fiction", "philosophical thriller", "political drama"]
+  },
+  "productions": [
+    {
+      "id": "main_story",
+      "title": "Project 521: The Discovery",
+      "description": "The main narrative following the Mars research team's discovery and its implications",
+      "type": "series",
+      "status": "development",
+      "episodes": [],
+      "timeline": "main_timeline"
+    }
+  ],
+  "configuration": {
+    "defaultView": "characters",
+    "autosave": true,
+    "backupEnabled": true,
+    "exportFormats": ["fountain", "fdx", "pdf", "markdown"],
+    "collaborationEnabled": false
+  },
+  "metadata": {
+    "author": "StoryBlocks User",
+    "genre": "Science Fiction",
+    "targetAudience": "Adult",
+    "estimatedLength": "Feature Series",
+    "keywords": ["AI", "consciousness", "Mars", "simulation", "conspiracy", "identity"]
+  }
+}

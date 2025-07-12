@@ -1,0 +1,319 @@
+{
+  "main_timeline": {
+    "id": "main_timeline",
+    "title": "Project 521 Master Timeline",
+    "productionIds": ["main_story"],
+    "description": "Complete chronological timeline of events from Foundation origins through the main story period",
+    "timespan": {
+      "start": "1870-01-01",
+      "end": "2042-12-31",
+      "primaryPeriod": "2030-2042"
+    },
+    "events": [
+      {
+        "id": "foundation_origins",
+        "date": "1870-1900",
+        "title": "Foundation Secret Formation",
+        "description": "Wealthy industrialists form shadow network for global control",
+        "type": "political",
+        "importance": "historical_background",
+        "participants": ["gilded_age_industrialists"],
+        "locations": ["earth"],
+        "consequences": ["Sets up generational conspiracy"],
+        "tags": ["foundation", "origins", "control"]
+      },
+      {
+        "id": "foundation_consolidation", 
+        "date": "1918-1940",
+        "title": "Foundation Power Consolidation",
+        "description": "Foundation builds global network through world wars",
+        "type": "political",
+        "importance": "historical_background",
+        "participants": ["foundation"],
+        "locations": ["earth"],
+        "consequences": ["Global influence network established"],
+        "tags": ["foundation", "consolidation", "war"]
+      },
+      {
+        "id": "space_program_initiation",
+        "date": "1945-1975",
+        "title": "Secret Space Program Development",
+        "description": "Foundation begins Mars colonization planning while manipulating public space race",
+        "type": "technological",
+        "importance": "historical_background",
+        "participants": ["foundation", "space_agencies"],
+        "locations": ["earth"],
+        "consequences": ["Mars colonization becomes possible"],
+        "tags": ["foundation", "space", "mars", "technology"]
+      },
+      {
+        "id": "mars_colony_establishment",
+        "date": "1990-2030",
+        "title": "Mars Colony Development", 
+        "description": "Foundation establishes self-sustaining Mars colonies",
+        "type": "expansion",
+        "importance": "major",
+        "participants": ["foundation", "mars_colonists"],
+        "locations": ["mars"],
+        "consequences": ["Setting for main story established"],
+        "tags": ["mars", "colonization", "foundation"]
+      },
+      {
+        "id": "aya_stone_childhood",
+        "date": "1998-2016",
+        "title": "Aya Stone's Foundation Academy Training",
+        "description": "Aya's formative years in Foundation boarding school system",
+        "type": "character_development",
+        "importance": "major",
+        "participants": ["aya_stone", "bjorn_hessels"],
+        "locations": ["foundation_academy"],
+        "consequences": ["Shapes Aya's psychology and methods"],
+        "tags": ["aya_stone", "childhood", "foundation", "trauma"]
+      },
+      {
+        "id": "capsule_discovery",
+        "date": "2030-03-15",
+        "title": "Martian Capsule Discovery",
+        "description": "Proto-life and encrypted data capsule discovered during Mars excavation",
+        "type": "discovery", 
+        "importance": "inciting_incident",
+        "participants": ["project_521_team"],
+        "locations": ["project_521_facility"],
+        "consequences": ["Sets entire story in motion"],
+        "tags": ["discovery", "simulation", "consciousness", "mars"]
+      },
+      {
+        "id": "foundation_awareness",
+        "date": "2031-06-10",
+        "title": "Foundation Learns of Discovery",
+        "description": "Foundation becomes aware of Project 521 findings through surveillance",
+        "type": "intelligence",
+        "importance": "major",
+        "participants": ["foundation", "embedded_agents"],
+        "locations": ["foundation_headquarters"],
+        "consequences": ["Triggers conspiracy response"],
+        "tags": ["foundation", "surveillance", "intelligence"]
+      },
+      {
+        "id": "proto_life_analysis",
+        "date": "2030-2032",
+        "title": "Proto-Life Analysis Phase",
+        "description": "Initial biological analysis reveals intentional seeding patterns",
+        "type": "research",
+        "importance": "major",
+        "participants": ["project_521_team"],
+        "locations": ["project_521_facility"],
+        "consequences": ["First evidence of artificial origins"],
+        "tags": ["biology", "analysis", "intentional_seeding"]
+      },
+      {
+        "id": "infiltration_planning",
+        "date": "2031-2033",
+        "title": "Project 521 Infiltration Planning",
+        "description": "Aya plans infiltration to monitor and control dangerous discoveries",
+        "type": "conspiracy",
+        "importance": "major",
+        "participants": ["aya_stone", "vera_chen"],
+        "locations": ["foundation_headquarters"],
+        "consequences": ["Sets up Vera's infiltration"],
+        "tags": ["foundation", "infiltration", "vera_chen"]
+      },
+      {
+        "id": "pattern_recognition",
+        "date": "2032-2034",
+        "title": "Intentional Seeding Recognition",
+        "description": "Team recognizes proto-life was deliberately sent to solar system",
+        "type": "discovery",
+        "importance": "major",
+        "participants": ["project_521_team"],
+        "locations": ["project_521_facility"],
+        "consequences": ["Major paradigm shift in understanding"],
+        "tags": ["intentional_seeding", "alien_contact", "great_filter"]
+      },
+      {
+        "id": "vera_infiltration",
+        "date": "2033-08-22",
+        "title": "Vera Chen Joins Project 521", 
+        "description": "Vera integrates into research team as Foundation agent",
+        "type": "infiltration",
+        "importance": "major",
+        "participants": ["vera_chen", "project_521_team"],
+        "locations": ["project_521_facility"],
+        "consequences": ["Inside access for Foundation monitoring"],
+        "tags": ["infiltration", "vera_chen", "foundation_agent"]
+      },
+      {
+        "id": "consciousness_research_begins",
+        "date": "2034-2037",
+        "title": "Quantum Consciousness Research",
+        "description": "Team discovers quantum connections between consciousness and reality manipulation",
+        "type": "research",
+        "importance": "major",
+        "participants": ["project_521_team", "vera_chen"],
+        "locations": ["project_521_facility"],
+        "consequences": ["Bridge between biology and consciousness"],
+        "tags": ["consciousness", "quantum", "reality_manipulation"]
+      },
+      {
+        "id": "cult_establishment",
+        "date": "2035-01-01",
+        "title": "Awakened Collective Formation",
+        "description": "Aya establishes consciousness cult on Mars as testing ground",
+        "type": "organization",
+        "importance": "major", 
+        "participants": ["aya_stone", "initial_cult_members"],
+        "locations": ["cult_compound"],
+        "consequences": ["Alternative power base for Aya"],
+        "tags": ["cult", "consciousness", "aya_stone"]
+      },
+      {
+        "id": "genesis_expansion",
+        "date": "2035-2038",
+        "title": "Genesis Corporation Expansion",
+        "description": "Elena Vasquez expands genetic modification programs across Mars",
+        "type": "corporate",
+        "importance": "major",
+        "participants": ["elena_vasquez", "genesis_corporation"],
+        "locations": ["mars_colony_central", "genesis_facilities"],
+        "consequences": ["Enhanced human population grows"],
+        "tags": ["genesis", "enhancement", "elena_vasquez"]
+      },
+      {
+        "id": "simulation_hypothesis",
+        "date": "2037-2039",
+        "title": "Simulation Theory Evidence",
+        "description": "Overwhelming evidence suggests universe is simulation that consciousness can break",
+        "type": "discovery",
+        "importance": "climactic",
+        "participants": ["project_521_team", "vera_chen"],
+        "locations": ["project_521_facility"],
+        "consequences": ["Reality itself comes into question"],
+        "tags": ["simulation", "consciousness", "great_filter", "reality"]
+      },
+      {
+        "id": "foundation_crisis_response",
+        "date": "2039-2040",
+        "title": "Foundation Emergency Response",
+        "description": "Aya accelerates takeover plans due to simulation discovery threat",
+        "type": "crisis",
+        "importance": "major",
+        "participants": ["aya_stone", "foundation"],
+        "locations": ["foundation_headquarters"],
+        "consequences": ["Open conflict begins"],
+        "tags": ["foundation", "crisis", "takeover", "acceleration"]
+      },
+      {
+        "id": "story_begins",
+        "date": "2040-01-01",
+        "title": "Main Story Period Begins",
+        "description": "Characters face critical decisions as discoveries and conspiracy converge",
+        "type": "narrative",
+        "importance": "story_start",
+        "participants": ["all_main_characters"],
+        "locations": ["multiple"],
+        "consequences": ["Active story period"],
+        "tags": ["story_start", "character_development", "conflict"]
+      },
+      {
+        "id": "twin_revelation_period",
+        "date": "2040-06-2041-03",
+        "title": "Washington Twins Discovery Arc",
+        "description": "Sara and Sierra Washington discover their connection",
+        "type": "character_development",
+        "importance": "major",
+        "participants": ["sara_sierra_washington", "sierra_washington"],
+        "locations": ["multiple"],
+        "consequences": ["Identity crisis and loyalty conflicts"],
+        "tags": ["twins", "identity", "family", "loyalty"]
+      },
+      {
+        "id": "reality_breakdown_period",
+        "date": "2040-2041",
+        "title": "Reality Glitch Manifestations",
+        "description": "Characters experience reality inconsistencies as awareness grows",
+        "type": "supernatural",
+        "importance": "escalation",
+        "participants": ["all_characters"],
+        "locations": ["multiple"],
+        "consequences": ["Personal stakes of discovery"],
+        "tags": ["reality", "glitches", "consciousness", "breakdown"]
+      },
+      {
+        "id": "enhancement_rebellion",
+        "date": "2041-03-2041-09",
+        "title": "Enhanced Human Uprising",
+        "description": "Enhanced individuals develop beyond Elena's control",
+        "type": "social_upheaval",
+        "importance": "major",
+        "participants": ["enhanced_individuals", "elena_vasquez"],
+        "locations": ["mars_colony_central"],
+        "consequences": ["Questions about human nature and control"],
+        "tags": ["enhancement", "rebellion", "human_nature"]
+      },
+      {
+        "id": "conspiracy_exposure",
+        "date": "2041-09-2042-03",
+        "title": "Foundation Conspiracy Revealed",
+        "description": "Full extent of Foundation manipulation becomes known",
+        "type": "revelation",
+        "importance": "climactic",
+        "participants": ["all_characters"],
+        "locations": ["multiple"],
+        "consequences": ["Final conflict period begins"],
+        "tags": ["conspiracy", "revelation", "foundation", "truth"]
+      },
+      {
+        "id": "final_choice_period",
+        "date": "2042-03-2042-12",
+        "title": "Final Decision Period",
+        "description": "Characters must choose between truth, control, and different visions of humanity's future",
+        "type": "resolution",
+        "importance": "climactic",
+        "participants": ["all_main_characters"],
+        "locations": ["multiple"],
+        "consequences": ["Story resolution and character fates"],
+        "tags": ["choice", "resolution", "humanity", "future"]
+      }
+    ],
+    "periods": [
+      {
+        "id": "historical_background",
+        "title": "Historical Foundation Period",
+        "start": "1870-01-01",
+        "end": "1990-01-01",
+        "description": "Foundation establishment and power consolidation"
+      },
+      {
+        "id": "mars_development",
+        "title": "Mars Colonization Period", 
+        "start": "1990-01-01",
+        "end": "2030-01-01",
+        "description": "Mars colony establishment and character formation"
+      },
+      {
+        "id": "discovery_phase",
+        "title": "Discovery and Investigation",
+        "start": "2030-03-15",
+        "end": "2037-01-01", 
+        "description": "Initial discovery through consciousness research"
+      },
+      {
+        "id": "revelation_phase",
+        "title": "Simulation Evidence Period",
+        "start": "2037-01-01",
+        "end": "2040-01-01",
+        "description": "Simulation hypothesis confirmed, conspiracy response"
+      },
+      {
+        "id": "active_story",
+        "title": "Main Story Period",
+        "start": "2040-01-01",
+        "end": "2042-12-31",
+        "description": "Active narrative period with character choices and resolutions"
+      }
+    ],
+    "tags": ["main_timeline", "project_521", "foundation", "mars", "consciousness"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "consciousness_authenticity": {
+    "id": "consciousness_authenticity",
+    "title": "The Authenticity of Consciousness",
+    "category": "philosophical",
+    "productionIds": ["main_story"],
+    "description": "What makes consciousness authentic? Can simulated awareness be as valid as 'natural' consciousness? Does the source of experience matter if the experience itself feels real?",
+    "centralQuestion": "Is there a meaningful difference between authentic and artificial consciousness?",
+    "perspectives": [
+      {
+        "character": "marcus_chen",
+        "viewpoint": "Scientific materialist - consciousness emerges from complexity, source doesn't matter",
+        "evolution": "Struggles when discovery challenges his materialist assumptions"
+      },
+      {
+        "character": "aya_stone", 
+        "viewpoint": "Authentic consciousness requires freedom from technological dependency",
+        "evolution": "Becomes authoritarian while claiming to preserve authenticity"
+      },
+      {
+        "character": "elena_vasquez",
+        "viewpoint": "Enhanced consciousness is more authentic than limited natural awareness",
+        "evolution": "Discovers enhanced beings develop beyond her control"
+      },
+      {
+        "character": "vera_chen",
+        "viewpoint": "Questions whether her own consciousness and emotions are authentic",
+        "evolution": "Must decide if programmed feelings can become real through choice"
+      }
+    ],
+    "manifestations": [
+      "Enhanced individuals questioning their modified consciousness",
+      "Cult members experiencing collective vs. individual awareness",
+      "Simulated beings developing beyond their programming",
+      "Characters testing reality through consciousness experiments"
+    ],
+    "resolution": "Suggests consciousness becomes authentic through choice and growth, regardless of origin",
+    "tags": ["consciousness", "authenticity", "philosophy", "identity"],
+    "status": "core_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "truth_vs_comfort": {
+    "id": "truth_vs_comfort",
+    "title": "Truth vs. Comfortable Illusion",
+    "category": "moral",
+    "productionIds": ["main_story"],
+    "description": "Is it better to live in comfortable ignorance or face harsh reality? Who has the right to decide what others can handle knowing?",
+    "centralQuestion": "Does consciousness have a right to truth regardless of the consequences?",
+    "perspectives": [
+      {
+        "character": "sierra_washington",
+        "viewpoint": "Truth is essential for making informed decisions",
+        "evolution": "Faces the cost of truth when it threatens everything she's protected"
+      },
+      {
+        "character": "aya_stone",
+        "viewpoint": "Some truths are too dangerous for unprepared minds",
+        "evolution": "Uses this justification to become controlling and paternalistic"
+      },
+      {
+        "character": "cult_members",
+        "viewpoint": "Prefer comforting belief system to uncertain reality",
+        "evolution": "Some choose growth through discomfort, others retreat further"
+      },
+      {
+        "character": "enhanced_individuals",
+        "viewpoint": "Truth about their modifications is complicated by benefits received",
+        "evolution": "Must weigh personal growth against methods used to achieve it"
+      }
+    ],
+    "manifestations": [
+      "Project 521 team debating whether to release discovery",
+      "Cult offering escape from technological uncertainty",
+      "Foundation providing false security through control",
+      "Enhanced individuals choosing awareness over comfort"
+    ],
+    "resolution": "Suggests individuals must choose for themselves, but choice requires honest information",
+    "tags": ["truth", "comfort", "choice", "knowledge", "responsibility"],
+    "status": "core_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "power_and_control": {
+    "id": "power_and_control", 
+    "title": "The Corruption of Power",
+    "category": "political",
+    "productionIds": ["main_story"],
+    "description": "How does the desire to help others become the need to control them? Can authoritarian methods ever serve authentic human interests?",
+    "centralQuestion": "When does protection become oppression?",
+    "perspectives": [
+      {
+        "character": "aya_stone",
+        "viewpoint": "Believes controlling others is necessary to protect them from harm",
+        "evolution": "Gradually becomes the authoritarian threat she originally opposed"
+      },
+      {
+        "character": "elena_vasquez",
+        "viewpoint": "Superior vision justifies overriding individual choice",
+        "evolution": "Faces rebellion from those she 'improved' without consent"
+      },
+      {
+        "character": "sara_sierra_washington",
+        "viewpoint": "Loyal execution of orders serves greater good",
+        "evolution": "Questions whether loyalty can become complicity in harm"
+      },
+      {
+        "character": "vera_chen",
+        "viewpoint": "Manipulates from within to moderate extremism",
+        "evolution": "Discovers that hidden manipulation can corrupt good intentions"
+      }
+    ],
+    "manifestations": [
+      "Foundation's generational conspiracy for 'global stewardship'",
+      "Aya's cult using love and belonging to control behavior",
+      "Elena's corporate empire controlling through economic dependency",
+      "Characters choosing between safety and freedom"
+    ],
+    "resolution": "Shows that sustainable change requires consent and participation, not control",
+    "tags": ["power", "control", "authority", "corruption", "manipulation"],
+    "status": "core_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "identity_and_family": {
+    "id": "identity_and_family",
+    "title": "Identity and Family Bonds",
+    "category": "personal",
+    "productionIds": ["main_story"],
+    "description": "What shapes identity - genetics, environment, or choice? Can family bonds transcend ideological differences?",
+    "centralQuestion": "Are we defined by our origins or our choices?",
+    "perspectives": [
+      {
+        "character": "sara_sierra_washington",
+        "viewpoint": "Identity shaped by institutional training and loyalty",
+        "evolution": "Discovers genetic twin forces reevaluation of nature vs. nurture"
+      },
+      {
+        "character": "sierra_washington", 
+        "viewpoint": "Identity formed through service and professional achievement",
+        "evolution": "Family revelation challenges assumptions about individual merit"
+      },
+      {
+        "character": "vera_chen",
+        "viewpoint": "Uncertain about own origins and authentic identity",
+        "evolution": "Must choose between discovered family and chosen relationships"
+      },
+      {
+        "character": "marcus_chen",
+        "viewpoint": "Identity comes from intellectual pursuit and ethical choices",
+        "evolution": "Family connection to infiltrator complicates his objectivity"
+      }
+    ],
+    "manifestations": [
+      "Twin sisters serving opposing sides unknowingly",
+      "Vera's mysterious family connection to Marcus",
+      "Enhanced individuals questioning their modified identities",
+      "Aya's childhood trauma shaping her adult ideology"
+    ],
+    "resolution": "Suggests identity is built through ongoing choices, but family connections provide important context",
+    "tags": ["identity", "family", "genetics", "choice", "relationships"],
+    "status": "major_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "technology_and_humanity": {
+    "id": "technology_and_humanity",
+    "title": "Technology's Role in Human Experience", 
+    "category": "technological",
+    "productionIds": ["main_story"],
+    "description": "Can humans maintain agency while embracing technological enhancement? Is there a meaningful distinction between natural and artificial intelligence?",
+    "centralQuestion": "How can humanity evolve with technology without losing essential human qualities?",
+    "perspectives": [
+      {
+        "character": "aya_stone",
+        "viewpoint": "Technology dependency destroys authentic human consciousness",
+        "evolution": "Becomes dependent on AI while preaching against technological reliance"
+      },
+      {
+        "character": "elena_vasquez",
+        "viewpoint": "Technology should accelerate human evolution and capability",
+        "evolution": "Learns that enhanced humans develop beyond her technological control"
+      },
+      {
+        "character": "bjorn_hessels",
+        "viewpoint": "Technology should enhance human choice, not replace it",
+        "evolution": "Struggles with enabling Aya's authoritarian use of his innovations"
+      },
+      {
+        "character": "enhanced_individuals",
+        "viewpoint": "Technology integration can expand rather than diminish humanity",
+        "evolution": "Demonstrate that enhancement can increase rather than decrease agency"
+      }
+    ],
+    "manifestations": [
+      "Genetic modifications changing human capability and identity",
+      "AI systems used to control vs. empower human consciousness",
+      "Simulation technology blurring reality and illusion",
+      "Characters choosing how to integrate with technological systems"
+    ],
+    "resolution": "Suggests balance - technology as tool for human flourishing rather than replacement",
+    "tags": ["technology", "humanity", "enhancement", "AI", "evolution"],
+    "status": "major_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "reality_and_illusion": {
+    "id": "reality_and_illusion",
+    "title": "The Nature of Reality",
+    "category": "metaphysical", 
+    "productionIds": ["main_story"],
+    "description": "If reality is simulation, what makes experience meaningful? Can illusion serve authentic purposes?",
+    "centralQuestion": "Does the 'realness' of reality matter if experience is genuine?",
+    "perspectives": [
+      {
+        "character": "marcus_chen",
+        "viewpoint": "Reality's structure matters less than consistent natural laws",
+        "evolution": "Discovers that consciousness can alter those laws"
+      },
+      {
+        "character": "project_521_team",
+        "viewpoint": "Understanding reality's nature is essential for informed choice",
+        "evolution": "Learn that some realities may be too complex for full understanding"
+      },
+      {
+        "character": "cult_members",
+        "viewpoint": "Shared illusion can be more meaningful than isolated truth",
+        "evolution": "Some embrace complexity while others retreat to simpler beliefs"
+      },
+      {
+        "character": "foundation",
+        "viewpoint": "Controlled illusion prevents dangerous chaos",
+        "evolution": "Control systems become indistinguishable from the problems they solve"
+      }
+    ],
+    "manifestations": [
+      "Characters experiencing reality glitches as awareness grows",
+      "Simulation layers creating nested questions about 'base reality'",
+      "Different characters choosing different relationships to truth",
+      "Reality becoming collaborative between consciousness and system"
+    ],
+    "resolution": "Suggests reality's meaning comes from conscious engagement, not its fundamental structure",
+    "tags": ["reality", "simulation", "illusion", "meaning", "consciousness"],
+    "status": "major_theme", 
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "sacrifice_and_responsibility": {
+    "id": "sacrifice_and_responsibility",
+    "title": "Individual Sacrifice for Collective Good",
+    "category": "ethical",
+    "productionIds": ["main_story"],
+    "description": "When is individual sacrifice justified for collective benefit? Who decides what the collective good requires?",
+    "centralQuestion": "Can individual rights be overridden for species-level concerns?",
+    "perspectives": [
+      {
+        "character": "aya_stone",
+        "viewpoint": "Individual freedom must be sacrificed to prevent species extinction",
+        "evolution": "Becomes willing to sacrifice everything, including her own humanity"
+      },
+      {
+        "character": "sierra_washington",
+        "viewpoint": "Military duty requires personal sacrifice for mission success",
+        "evolution": "Questions whether mission goals justify the methods required"
+      },
+      {
+        "character": "enhanced_individuals",
+        "viewpoint": "Personal modification serves community survival needs",
+        "evolution": "Discover their sacrifice enabled growth beyond original purposes"
+      },
+      {
+        "character": "vera_chen",
+        "viewpoint": "Personal relationships must be subordinated to larger mission",
+        "evolution": "Learns that authentic relationships can serve larger purposes"
+      }
+    ],
+    "manifestations": [
+      "Characters giving up personal desires for team/species survival",
+      "Foundation operatives sacrificing individual identity for organizational goals",
+      "Enhanced individuals accepting modifications for community benefit",
+      "Difficult choices between personal loyalty and broader responsibility"
+    ],
+    "resolution": "Suggests genuine sacrifice must be chosen, not imposed, and serve authentic rather than abstract goods",
+    "tags": ["sacrifice", "responsibility", "collective", "individual", "choice"],
+    "status": "supporting_theme",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

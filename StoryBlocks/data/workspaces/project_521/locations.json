@@ -1,0 +1,183 @@
+{
+  "project_521_facility": {
+    "id": "project_521_facility",
+    "name": "Project 521 Research Facility",
+    "type": "research_facility",
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Mars",
+      "region": "Chryse Planitia",
+      "coordinates": "22.48°N 49.97°W",
+      "environment": "Pressurized dome complex"
+    },
+    "description": "A state-of-the-art research facility designed for studying the mysterious capsule discovery. The facility includes advanced laboratories, secure storage for artifacts, living quarters for the research team, and quantum computing resources for consciousness studies.",
+    "atmosphere": "Clinical yet cutting-edge, with an underlying tension as researchers grapple with discoveries that challenge reality itself.",
+    "keyFeatures": [
+      "Quantum consciousness research lab",
+      "Secure artifact storage vault", 
+      "Team living quarters and common areas",
+      "Advanced computational resources",
+      "Isolation chamber for reality testing",
+      "Communication array (potentially monitored)"
+    ],
+    "significance": "Ground zero for the simulation discovery that threatens to unravel everything",
+    "inhabitants": ["marcus_chen", "sierra_washington", "research_team"],
+    "connectedLocations": ["mars_colony_central", "cult_compound"],
+    "timelineEvents": ["capsule_discovery", "simulation_hypothesis", "vera_infiltration"],
+    "status": "active",
+    "securityLevel": "classified",
+    "tags": ["Mars", "research", "discovery", "consciousness", "simulation"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "mars_colony_central": {
+    "id": "mars_colony_central", 
+    "name": "New Geneva Colony",
+    "type": "settlement",
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Mars",
+      "region": "Chryse Planitia",
+      "environment": "Terraformed dome city"
+    },
+    "description": "The largest and most advanced Mars colony, serving as the commercial and administrative hub for Martian civilization. Controlled primarily by Elena Vasquez's Genesis Corporation through economic dominance.",
+    "atmosphere": "Bustling corporate efficiency with underlying social tensions between enhanced and baseline humans",
+    "keyFeatures": [
+      "Genesis Corporation headquarters",
+      "Genetic modification centers",
+      "Multi-tier residential areas",
+      "Commercial and entertainment districts",
+      "Spaceport for Earth-Mars travel",
+      "Agricultural domes with modified crops"
+    ],
+    "significance": "Elena's base of operations and testing ground for human enhancement",
+    "inhabitants": ["elena_vasquez", "genesis_employees", "colony_residents"],
+    "connectedLocations": ["project_521_facility", "genesis_facilities", "cult_compound"],
+    "timelineEvents": ["genesis_expansion", "enhancement_programs"],
+    "status": "active",
+    "securityLevel": "corporate_controlled",
+    "tags": ["Mars", "colony", "Genesis", "enhancement", "commercial"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "cult_compound": {
+    "id": "cult_compound",
+    "name": "The Awakened Collective Sanctuary",
+    "type": "religious_compound",
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Mars",
+      "region": "Remote plateau outside main colony",
+      "environment": "Converted research facility"
+    },
+    "description": "A repurposed research facility converted into a commune for Aya Stone's consciousness cult. Designed to isolate members from technological dependency while secretly using advanced surveillance.",
+    "atmosphere": "Peaceful facade hiding authoritarian control and psychological manipulation",
+    "keyFeatures": [
+      "Central meeting hall for group sessions",
+      "Individual meditation chambers",
+      "Community living spaces",
+      "Hidden surveillance and control systems",
+      "Reality testing equipment",
+      "Isolation chambers for 'awakening' processes"
+    ],
+    "significance": "Aya's base for building her alternative society and testing consciousness theories",
+    "inhabitants": ["aya_stone", "vera_chen", "cult_members"],
+    "connectedLocations": ["mars_colony_central", "project_521_facility"],
+    "timelineEvents": ["cult_establishment", "vera_arrival", "membership_growth"],
+    "status": "active",
+    "securityLevel": "cult_controlled",
+    "tags": ["Mars", "cult", "consciousness", "isolation", "manipulation"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "foundation_headquarters": {
+    "id": "foundation_headquarters",
+    "name": "Foundation Global Headquarters",
+    "type": "corporate_headquarters", 
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Earth",
+      "location": "Undisclosed secure location",
+      "environment": "Underground/heavily fortified complex"
+    },
+    "description": "The secret nerve center of the Foundation's global operations. A combination of classical architecture and cutting-edge technology, reflecting the organization's blend of old-world power and futuristic capabilities.",
+    "atmosphere": "Cold efficiency masking decades of accumulated power and control",
+    "keyFeatures": [
+      "AI-assisted command and control center",
+      "Secure communication arrays",
+      "Historical archives of global manipulation",
+      "Elite training facilities",
+      "Advanced weapons and technology development",
+      "Holding facilities for dissidents"
+    ],
+    "significance": "Command center for the conspiracy that threatens human autonomy",
+    "inhabitants": ["sara_sierra_washington", "foundation_leadership", "operatives"],
+    "connectedLocations": ["global_operations", "mars_monitoring_stations"],
+    "timelineEvents": ["foundation_takeover", "mars_mission_planning"],
+    "status": "active",
+    "securityLevel": "maximum_security",
+    "tags": ["Earth", "Foundation", "conspiracy", "control", "headquarters"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "genesis_facilities": {
+    "id": "genesis_facilities",
+    "name": "Genesis Corporation Research Complex",
+    "type": "corporate_research",
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Mars",
+      "region": "Connected to New Geneva Colony",
+      "environment": "High-tech corporate campus"
+    },
+    "description": "Elena Vasquez's advanced research and development facilities where human genetic modifications are designed, tested, and implemented. Combines medical sophistication with corporate efficiency.",
+    "atmosphere": "Sleek corporate professionalism hiding ethical compromises",
+    "keyFeatures": [
+      "Genetic modification laboratories",
+      "Human testing facilities",
+      "Corporate offices and meeting rooms",
+      "Manufacturing facilities for enhancement tech",
+      "Residential quarters for enhanced employees",
+      "Security and containment systems"
+    ],
+    "significance": "Ground zero for human enhancement programs that challenge identity",
+    "inhabitants": ["elena_vasquez", "genesis_researchers", "test_subjects"],
+    "connectedLocations": ["mars_colony_central", "foundation_headquarters"],
+    "timelineEvents": ["enhancement_development", "ethical_controversies"],
+    "status": "active",
+    "securityLevel": "corporate_classified",
+    "tags": ["Mars", "Genesis", "enhancement", "research", "ethics"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  },
+  "earth_surveillance_centers": {
+    "id": "earth_surveillance_centers",
+    "name": "Foundation Global Monitoring Network",
+    "type": "surveillance_network",
+    "productionIds": ["main_story"],
+    "geography": {
+      "planet": "Earth",
+      "location": "Multiple covert locations worldwide",
+      "environment": "Hidden within existing infrastructure"
+    },
+    "description": "A network of hidden surveillance and control centers that monitor global communications, influence media narratives, and coordinate Foundation operations across Earth.",
+    "atmosphere": "Paranoid efficiency - watching everything while staying invisible",
+    "keyFeatures": [
+      "Global communication monitoring",
+      "Social media manipulation systems",
+      "Financial network controls",
+      "Agent coordination centers",
+      "Data analysis and AI processing",
+      "Emergency response capabilities"
+    ],
+    "significance": "The invisible web of control that maintains Foundation power",
+    "inhabitants": ["foundation_operatives", "technical_specialists"],
+    "connectedLocations": ["foundation_headquarters", "public_institutions"],
+    "timelineEvents": ["global_monitoring_expansion", "narrative_control_operations"],
+    "status": "active",
+    "securityLevel": "compartmentalized",
+    "tags": ["Earth", "surveillance", "control", "manipulation", "network"],
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z"
+  }
+}

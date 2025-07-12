@@ -1,0 +1,44 @@
+{
+  "main_story": {
+    "id": "main_story",
+    "title": "Project 521: The Discovery",
+    "description": "The main narrative following the Mars research team's discovery of pre-life artifacts and encrypted data that suggests reality itself may be a simulation. As they uncover the truth, they must navigate Foundation conspiracy, cult manipulation, and the fundamental question of what makes consciousness authentic.",
+    "type": "series",
+    "status": "development",
+    "format": "television_series",
+    "created": "2025-01-12T00:00:00Z",
+    "lastModified": "2025-01-12T00:00:00Z",
+    "structure": {
+      "seasons": 3,
+      "episodesPerSeason": 8,
+      "episodeLength": "60 minutes",
+      "totalRuntime": "24 hours"
+    },
+    "logline": "When a Mars research team discovers evidence that reality is a simulation, they must navigate conspiracy, cult manipulation, and their own identity crises while deciding whether humanity deserves the truth.",
+    "themes": [
+      "What makes consciousness authentic?",
+      "Is comfortable illusion better than harsh truth?",
+      "How do power structures exploit human vulnerability?",
+      "Can individuals maintain agency in controlled systems?"
+    ],
+    "targetAudience": {
+      "demographic": "Adults 25-55",
+      "genre": "Science Fiction Drama",
+      "comparables": ["Westworld", "The Matrix", "Black Mirror", "Foundation"]
+    },
+    "settings": {
+      "primary": ["Mars Colony", "Project 521 Research Facility"],
+      "secondary": ["Earth Foundation Headquarters", "Cult Compound", "Various Mars Locations"]
+    },
+    "timeline": {
+      "start": "2040-01-01",
+      "end": "2042-12-31",
+      "duration": "3 years story time"
+    },
+    "characters": {
+      "protagonists": ["marcus_chen", "sierra_washington", "enhanced_individuals"],
+      "antagonists": ["aya_stone", "sara_stone", "foundation_leadership"],
+      "supporting": ["vera_chen", "elena_vasquez", "bjorn_hessels", "cult_members", "research_team"]
+    }
+  }
+}

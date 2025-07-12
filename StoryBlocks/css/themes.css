@@ -1,0 +1,292 @@
+/* Theme Variations */
+
+/* Light Theme (Default) - already defined in main.css */
+
+/* Dark Theme */
+[data-theme="dark"] {
+    /* Base colors */
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #334155;
+    --border: #334155;
+    --border-dark: #475569;
+    
+    /* Text colors */
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+    --text-inverse: #0f172a;
+    
+    /* Status colors remain mostly the same but with adjusted shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* High Contrast Theme */
+[data-theme="high-contrast"] {
+    --background: #000000;
+    --surface: #1a1a1a;
+    --surface-hover: #333333;
+    --border: #666666;
+    --border-dark: #999999;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-tertiary: #999999;
+    --text-inverse: #000000;
+    
+    --primary: #0066ff;
+    --primary-dark: #0052cc;
+    --primary-light: #3385ff;
+    
+    --success: #00cc00;
+    --warning: #ffcc00;
+    --danger: #ff3333;
+    --info: #00ccff;
+}
+
+/* Sepia Theme */
+[data-theme="sepia"] {
+    --background: #f7f3e9;
+    --surface: #f1ede0;
+    --surface-hover: #ebe5d6;
+    --border: #d4c5a9;
+    --border-dark: #c4b59a;
+    
+    --text-primary: #2c1810;
+    --text-secondary: #5d4e37;
+    --text-tertiary: #8b7355;
+    --text-inverse: #f7f3e9;
+    
+    --primary: #8b4513;
+    --primary-dark: #6b3410;
+    --primary-light: #a0522d;
+    
+    --success: #556b2f;
+    --warning: #cd853f;
+    --danger: #a0522d;
+    --info: #4682b4;
+}
+
+/* Theme transitions */
+* {
+    transition: background-color var(--transition-base), 
+                color var(--transition-base), 
+                border-color var(--transition-base);
+}
+
+/* Disable transitions when changing themes */
+.theme-transitioning * {
+    transition: none !important;
+}
+
+/* Theme-specific component overrides */
+
+/* Dark theme scrollbars */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* High contrast focus indicators */
+[data-theme="high-contrast"] :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* High contrast buttons */
+[data-theme="high-contrast"] .btn {
+    border: 2px solid currentColor;
+}
+
+/* Sepia theme code blocks */
+[data-theme="sepia"] .monaco-editor {
+    filter: sepia(20%);
+}
+
+/* Theme-aware images */
+[data-theme="dark"] .theme-adaptive-image {
+    filter: brightness(0.8) contrast(1.1);
+}
+
+[data-theme="sepia"] .theme-adaptive-image {
+    filter: sepia(30%) saturate(0.8);
+}
+
+/* Print styles */
+@media print {
+    :root {
+        --background: white;
+        --surface: white;
+        --text-primary: black;
+        --text-secondary: #333;
+        --border: #ccc;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .app-header,
+    .app-sidebar {
+        display: none !important;
+    }
+    
+    .content-area {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-base: 0ms;
+        --transition-slow: 0ms;
+    }
+    
+    .loading-spinner {
+        animation: none;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Color scheme preferences */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --background: #0f172a;
+        --surface: #1e293b;
+        --surface-hover: #334155;
+        --border: #334155;
+        --border-dark: #475569;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-tertiary: #64748b;
+        --text-inverse: #0f172a;
+    }
+}
+
+/* Force color scheme for form controls */
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* OS-specific overrides */
+.is-mac .btn {
+    font-size: 0.8125rem;
+}
+
+.is-windows .btn {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Theme picker component */
+.theme-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.theme-option:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.theme-option.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--text-inverse);
+}
+
+.theme-preview {
+    width: 60px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: var(--background);
+}
+
+.theme-preview::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: var(--surface);
+}
+
+/* Light theme preview */
+.theme-preview.light::before {
+    background: #ffffff;
+}
+.theme-preview.light::after {
+    background: #f8fafc;
+}
+
+/* Dark theme preview */
+.theme-preview.dark::before {
+    background: #0f172a;
+}
+.theme-preview.dark::after {
+    background: #1e293b;
+}
+
+/* High contrast theme preview */
+.theme-preview.high-contrast::before {
+    background: #000000;
+}
+.theme-preview.high-contrast::after {
+    background: #1a1a1a;
+}
+
+/* Sepia theme preview */
+.theme-preview.sepia::before {
+    background: #f7f3e9;
+}
+.theme-preview.sepia::after {
+    background: #f1ede0;
+}
