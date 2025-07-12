@@ -651,6 +651,18 @@ class StoryBlocks {
                     <p style="color: var(--text-secondary); margin-top: 3rem; font-size: 0.875rem;">
                         All your data is stored locally and auto-saved as you work
                     </p>
+                    
+                    ${!('showDirectoryPicker' in window) ? `
+                        <div style="background: var(--warning); color: white; padding: 1rem; border-radius: 0.5rem; margin-top: 2rem;">
+                            <strong>⚠️ Limited Browser Support</strong><br>
+                            Your browser doesn't support direct folder access. You can still use StoryBlocks, but:
+                            <ul style="margin: 0.5rem 0 0 1rem; padding-left: 1rem;">
+                                <li>Files will download individually when creating projects</li>
+                                <li>You'll need to manually create subfolders</li>
+                                <li>For the best experience, use Chrome, Edge, or Brave browser</li>
+                            </ul>
+                        </div>
+                    ` : ''}
                 </div>
             `;
         }
@@ -1090,6 +1102,15 @@ class StoryBlocks {
         const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
         const storyType = document.getElementById('story-type').value;
         
+        // Check if File System Access API is supported
+        if (!('showDirectoryPicker' in window)) {
+            // Fallback for browsers without File System Access API
+            alert('Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace');
+            
+            this.generateWorkspaceFiles(title, description, storyType);
+            return;
+        }
+        
         try {
             // Use File System Access API to get folder permission
             const directoryHandle = await window.showDirectoryPicker({
@@ -1250,6 +1271,134 @@ ${workspaceId}/
         const writable = await fileHandle.createWritable();
         await writable.write(content);
         await writable.close();
+    }
+    
+    generateWorkspaceFiles(title, description, storyType) {
+        // Create workspace structure
+        const workspaceId = title.toLowerCase().replace(/[^a-z0-9]/g, '_');
+        
+        const workspace = {
+            id: workspaceId,
+            title: title,
+            description: description,
+            world: {
+                title: title,
+                description: description,
+                themes: []
+            },
+            created: new Date().toISOString(),
+            lastModified: new Date().toISOString()
+        };
+        
+        const productions = {
+            main_story: {
+                id: 'main_story',
+                title: title,
+                type: storyType,
+                description: description,
+                created: new Date().toISOString(),
+                lastModified: new Date().toISOString()
+            }
+        };
+        
+        const characters = {};
+        const locations = {};
+        const plots = {};
+        const themes = {};
+        const timeline = {
+            main_timeline: {
+                id: 'main_timeline',
+                title: `${title} Timeline`,
+                description: 'Main story timeline',
+                events: []
+            }
+        };
+        const scripts = {};
+        
+        // Create README content
+        const readme = `# ${title}
+
+## Overview
+
+${description}
+
+## Project Type
+
+${storyType}
+
+## Workspace Structure
+
+\`\`\`
+${workspaceId}/
+├── workspace.json          # Main workspace configuration
+├── productions.json        # Story/production metadata
+├── characters.json         # Character profiles and relationships
+├── locations.json          # Setting details and significance
+├── plots.json             # Story arcs and plot points
+├── themes.json            # Thematic exploration
+├── timeline.json          # Chronological event structure
+├── scripts.json           # Screenplay content and outlines
+├── character_notes/        # Detailed character documents
+├── theme_notes/           # Theme exploration notes
+├── location_notes/        # Location research and details
+├── plot_notes/            # Plot development notes
+├── arc_notes/             # Character and story arc notes
+├── scripts/               # Fountain screenplay files
+└── README.md              # This overview document
+\`\`\`
+
+## Getting Started
+
+1. Save all downloaded files to a single folder
+2. Create the subfolders listed above
+3. In StoryBlocks, use "Load Existing Project" to open this workspace
+4. Start building your world!
+
+## Development Status
+
+- **Phase**: Initial Setup
+- **Created**: ${new Date().toLocaleDateString()}
+- **Next Steps**: Begin character and world development
+
+---
+
+*This workspace was created with StoryBlocks - A comprehensive world-building and storytelling platform*
+`;
+        
+        // Download all files
+        this.downloadFile('workspace.json', JSON.stringify(workspace, null, 2));
+        this.downloadFile('productions.json', JSON.stringify(productions, null, 2));
+        this.downloadFile('characters.json', JSON.stringify(characters, null, 2));
+        this.downloadFile('locations.json', JSON.stringify(locations, null, 2));
+        this.downloadFile('plots.json', JSON.stringify(plots, null, 2));
+        this.downloadFile('themes.json', JSON.stringify(themes, null, 2));
+        this.downloadFile('timeline.json', JSON.stringify(timeline, null, 2));
+        this.downloadFile('scripts.json', JSON.stringify(scripts, null, 2));
+        this.downloadFile('README.md', readme);
+        
+        // Clear existing data and load new project
+        this.state.state.characters.clear();
+        this.state.state.productions.clear();
+        this.state.state.locations.clear();
+        this.state.state.plots.clear();
+        this.state.state.themes.clear();
+        this.state.state.events.clear();
+        this.state.state.scripts.clear();
+        this.state.state.arcs = new Map();
+        this.state.state.lore = new Map();
+        this.state.state.timelines = new Map();
+        
+        // Load the new workspace data
+        this.state.state.world = workspace.world;
+        this.state.state.productions.set('main_story', productions.main_story);
+        this.state.setActiveProduction('main_story');
+        
+        // Save and emit changes
+        this.persistence.saveToLocalStorage();
+        this.events.emit('dataChanged');
+        
+        // Navigate to characters view
+        this.router.navigate('characters');
     }
     
     downloadFile(filename, content) {
