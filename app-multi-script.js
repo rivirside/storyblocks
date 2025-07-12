@@ -652,14 +652,18 @@ class StoryBlocks {
                         All your data is stored locally and auto-saved as you work
                     </p>
                     
-                    ${!('showDirectoryPicker' in window) ? `
+                    ${(!('showDirectoryPicker' in window) || window.location.hostname.includes('github.io')) ? `
                         <div style="background: var(--warning); color: white; padding: 1rem; border-radius: 0.5rem; margin-top: 2rem;">
-                            <strong>⚠️ Limited Browser Support</strong><br>
-                            Your browser doesn't support direct folder access. You can still use StoryBlocks, but:
+                            <strong>⚠️ ${window.location.hostname.includes('github.io') ? 'GitHub Pages Limitations' : 'Limited Browser Support'}</strong><br>
+                            ${window.location.hostname.includes('github.io') 
+                                ? 'GitHub Pages doesn\'t support direct folder access for security reasons.'
+                                : 'Your browser doesn\'t support direct folder access.'} 
+                            You can still use StoryBlocks, but:
                             <ul style="margin: 0.5rem 0 0 1rem; padding-left: 1rem;">
                                 <li>Files will download individually when creating projects</li>
                                 <li>You'll need to manually create subfolders</li>
-                                <li>For the best experience, use Chrome, Edge, or Brave browser</li>
+                                <li>Use folder selection to load projects</li>
+                                ${!window.location.hostname.includes('github.io') ? '<li>For the best experience, use Chrome, Edge, or Brave browser</li>' : ''}
                             </ul>
                         </div>
                     ` : ''}
@@ -1102,11 +1106,19 @@ class StoryBlocks {
         const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
         const storyType = document.getElementById('story-type').value;
         
-        // Check if File System Access API is supported
-        if (!('showDirectoryPicker' in window)) {
-            // Fallback for browsers without File System Access API
-            alert('Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace');
+        // Check if File System Access API is supported and we're not on a restricted environment
+        const isFileSystemAccessSupported = typeof window !== 'undefined' && 
+                                          'showDirectoryPicker' in window && 
+                                          window.isSecureContext &&
+                                          !window.location.hostname.includes('github.io');
+        
+        if (!isFileSystemAccessSupported) {
+            // Fallback for browsers without File System Access API or GitHub Pages
+            const message = window.location.hostname.includes('github.io') 
+                ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
+                : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
             
+            alert(message);
             this.generateWorkspaceFiles(title, description, storyType);
             return;
         }
