@@ -1102,68 +1102,41 @@ class StoryBlocks {
     }
     
     async generateWorkspace() {
-        console.log('generateWorkspace called');
-        console.log('typeof window.showDirectoryPicker:', typeof window.showDirectoryPicker);
-        
-        // Early exit if showDirectoryPicker is not available
-        if (typeof window.showDirectoryPicker !== 'function') {
-            console.log('showDirectoryPicker not available, using fallback');
+        try {
+            console.log('generateWorkspace called');
+            console.log('typeof window.showDirectoryPicker:', typeof window.showDirectoryPicker);
+            console.log('window.showDirectoryPicker:', window.showDirectoryPicker);
+            console.log('window.location.hostname:', window.location.hostname);
+            console.log('window.location.pathname:', window.location.pathname);
+            
             const title = document.getElementById('project-title').value || 'My Story World';
             const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
             const storyType = document.getElementById('story-type').value;
             
-            const message = window.location.hostname.includes('github.io') 
-                ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
-                : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
-            alert(message);
-            this.generateWorkspaceFiles(title, description, storyType);
-            return;
-        }
-        
-        console.log('showDirectoryPicker is available, continuing...');
-        
-        const title = document.getElementById('project-title').value || 'My Story World';
-        const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
-        const storyType = document.getElementById('story-type').value;
-        
-        // Debug logging
-        console.log('Current hostname:', window.location.hostname);
-        console.log('showDirectoryPicker available:', 'showDirectoryPicker' in window);
-        console.log('isSecureContext:', window.isSecureContext);
-        
-        // Check if File System Access API is supported and we're not on a restricted environment
-        // GitHub Pages domains can be username.github.io or custom domains
-        const isGitHubPages = window.location.hostname.includes('github.io') || 
-                             window.location.pathname.includes('/storyblocks');
-        
-        const isFileSystemAccessSupported = typeof window !== 'undefined' && 
-                                          'showDirectoryPicker' in window && 
-                                          window.isSecureContext &&
-                                          !isGitHubPages;
-        
-        console.log('isGitHubPages:', isGitHubPages);
-        console.log('isFileSystemAccessSupported:', isFileSystemAccessSupported);
-        
-        if (!isFileSystemAccessSupported || isGitHubPages) {
-            // Fallback for browsers without File System Access API or GitHub Pages
-            const message = isGitHubPages 
-                ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
-                : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
-            
-            alert(message);
-            try {
+            // Force fallback on GitHub Pages
+            if (window.location.hostname.includes('github.io') || 
+                window.location.pathname.includes('/storyblocks') ||
+                typeof window.showDirectoryPicker !== 'function') {
+                
+                console.log('Using fallback method - GitHub Pages or no File System API');
+                const message = (window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks'))
+                    ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
+                    : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
+                alert(message);
                 this.generateWorkspaceFiles(title, description, storyType);
-            } catch (error) {
-                console.error('Error generating workspace files:', error);
-                alert('Error creating workspace files. Please try again.');
+                return;
             }
-            return;
-        }
+        
+        // This point should never be reached on GitHub Pages
+        console.log('About to use File System Access API...');
+        console.log('This should not be reached on GitHub Pages!');
         
         try {
-            // Double-check before calling
-            if (typeof window.showDirectoryPicker !== 'function') {
-                throw new Error('showDirectoryPicker is not available');
+            // Final safety check
+            if (window.location.hostname.includes('github.io') || !window.showDirectoryPicker) {
+                console.log('Safety check triggered - using fallback');
+                this.generateWorkspaceFiles(title, description, storyType);
+                return;
             }
             
             // Use File System Access API to get folder permission
@@ -1327,6 +1300,11 @@ ${workspaceId}/
             }
             
             alert('Error creating workspace: ' + error.message);
+        }
+        } catch (outerError) {
+            console.error('Outer error in generateWorkspace:', outerError);
+            // Final fallback
+            alert('Unable to create workspace. Please try using a different browser or download the files manually.');
         }
     }
     
