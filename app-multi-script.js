@@ -1090,7 +1090,7 @@ class StoryBlocks {
                     <button onclick="this.closest('.modal-overlay').remove()" class="btn btn-secondary">
                         Cancel
                     </button>
-                    <button onclick="window.app.generateWorkspace().then(() => this.closest('.modal-overlay').remove()).catch(() => {});" class="btn btn-primary">
+                    <button onclick="window.app.generateWorkspace().then(() => this.closest('.modal-overlay').remove()).catch((err) => { console.error('Button catch error:', err); });" class="btn btn-primary">
                         Create Workspace
                     </button>
                 </div>
@@ -1102,18 +1102,25 @@ class StoryBlocks {
     }
     
     async generateWorkspace() {
+        console.log('generateWorkspace called');
+        console.log('typeof window.showDirectoryPicker:', typeof window.showDirectoryPicker);
+        
         // Early exit if showDirectoryPicker is not available
-        if (!window.showDirectoryPicker) {
+        if (typeof window.showDirectoryPicker !== 'function') {
             console.log('showDirectoryPicker not available, using fallback');
             const title = document.getElementById('project-title').value || 'My Story World';
             const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
             const storyType = document.getElementById('story-type').value;
             
-            const message = 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
+            const message = window.location.hostname.includes('github.io') 
+                ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
+                : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
             alert(message);
             this.generateWorkspaceFiles(title, description, storyType);
             return;
         }
+        
+        console.log('showDirectoryPicker is available, continuing...');
         
         const title = document.getElementById('project-title').value || 'My Story World';
         const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
@@ -1154,6 +1161,11 @@ class StoryBlocks {
         }
         
         try {
+            // Double-check before calling
+            if (typeof window.showDirectoryPicker !== 'function') {
+                throw new Error('showDirectoryPicker is not available');
+            }
+            
             // Use File System Access API to get folder permission
             const directoryHandle = await window.showDirectoryPicker({
                 mode: 'readwrite',
@@ -1304,6 +1316,16 @@ ${workspaceId}/
                 return;
             }
             console.error('Error creating workspace:', error);
+            
+            // If showDirectoryPicker failed, fall back to file download
+            if (error.message && (error.message.includes('showDirectoryPicker') || error.message.includes('not available'))) {
+                console.log('Falling back to file download method');
+                const message = 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
+                alert(message);
+                this.generateWorkspaceFiles(title, description, storyType);
+                return;
+            }
+            
             alert('Error creating workspace: ' + error.message);
         }
     }
