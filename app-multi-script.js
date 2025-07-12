@@ -1103,42 +1103,36 @@ class StoryBlocks {
     
     async generateWorkspace() {
         try {
-            console.log('generateWorkspace called');
-            console.log('typeof window.showDirectoryPicker:', typeof window.showDirectoryPicker);
-            console.log('window.showDirectoryPicker:', window.showDirectoryPicker);
-            console.log('window.location.hostname:', window.location.hostname);
-            console.log('window.location.pathname:', window.location.pathname);
+            // Immediately delegate to the appropriate method
+            if (!window.showDirectoryPicker || window.location.hostname.includes('github.io')) {
+                return this.generateWorkspaceForGitHubPages();
+            }
+            return this.generateWorkspaceWithFileSystem();
+        } catch (error) {
+            console.error('Error in generateWorkspace:', error);
+            return this.generateWorkspaceForGitHubPages();
+        }
+    }
+    
+    async generateWorkspaceForGitHubPages() {
+        console.log('Using GitHub Pages compatible method');
+        const title = document.getElementById('project-title').value || 'My Story World';
+        const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
+        const storyType = document.getElementById('story-type').value;
+        
+        const message = 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
+        alert(message);
+        this.generateWorkspaceFiles(title, description, storyType);
+    }
+    
+    async generateWorkspaceWithFileSystem() {
+        try {
+            console.log('generateWorkspaceWithFileSystem called');
             
             const title = document.getElementById('project-title').value || 'My Story World';
             const description = document.getElementById('project-description').value || 'A new fictional world waiting to be explored';
             const storyType = document.getElementById('story-type').value;
-            
-            // Force fallback on GitHub Pages
-            if (window.location.hostname.includes('github.io') || 
-                window.location.pathname.includes('/storyblocks') ||
-                typeof window.showDirectoryPicker !== 'function') {
-                
-                console.log('Using fallback method - GitHub Pages or no File System API');
-                const message = (window.location.hostname.includes('github.io') || window.location.pathname.includes('/storyblocks'))
-                    ? 'GitHub Pages doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace'
-                    : 'Your browser doesn\'t support direct folder access. Files will be downloaded individually.\n\n1. Create a new folder on your computer\n2. Save all downloaded files to that folder\n3. Create subfolders: character_notes, theme_notes, location_notes, plot_notes, arc_notes, scripts\n4. Use "Load Existing Project" to open your workspace';
-                alert(message);
-                this.generateWorkspaceFiles(title, description, storyType);
-                return;
-            }
         
-        // This point should never be reached on GitHub Pages
-        console.log('About to use File System Access API...');
-        console.log('This should not be reached on GitHub Pages!');
-        
-        try {
-            // Final safety check
-            if (window.location.hostname.includes('github.io') || !window.showDirectoryPicker) {
-                console.log('Safety check triggered - using fallback');
-                this.generateWorkspaceFiles(title, description, storyType);
-                return;
-            }
-            
             // Use File System Access API to get folder permission
             const directoryHandle = await window.showDirectoryPicker({
                 mode: 'readwrite',
@@ -1300,11 +1294,6 @@ ${workspaceId}/
             }
             
             alert('Error creating workspace: ' + error.message);
-        }
-        } catch (outerError) {
-            console.error('Outer error in generateWorkspace:', outerError);
-            // Final fallback
-            alert('Unable to create workspace. Please try using a different browser or download the files manually.');
         }
     }
     
