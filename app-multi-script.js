@@ -1102,11 +1102,28 @@ class StoryBlocks {
     }
     
     async generateWorkspace() {
+        console.log('=== generateWorkspace called ===');
+        console.log('window.showDirectoryPicker exists?', !!window.showDirectoryPicker);
+        console.log('typeof window.showDirectoryPicker:', typeof window.showDirectoryPicker);
+        console.log('hostname:', window.location.hostname);
+        console.log('pathname:', window.location.pathname);
+        
         try {
             // Immediately delegate to the appropriate method
-            if (!window.showDirectoryPicker || window.location.hostname.includes('github.io')) {
+            // Check multiple conditions to ensure we use the fallback
+            const shouldUseFallback = !window.showDirectoryPicker || 
+                                    typeof window.showDirectoryPicker !== 'function' ||
+                                    window.location.hostname.includes('github.io') ||
+                                    window.location.hostname.includes('github.dev') ||
+                                    window.location.protocol === 'file:';
+            
+            console.log('shouldUseFallback:', shouldUseFallback);
+            
+            if (shouldUseFallback) {
+                console.log('Delegating to generateWorkspaceForGitHubPages');
                 return this.generateWorkspaceForGitHubPages();
             }
+            console.log('Delegating to generateWorkspaceWithFileSystem');
             return this.generateWorkspaceWithFileSystem();
         } catch (error) {
             console.error('Error in generateWorkspace:', error);
